@@ -1,0 +1,71 @@
+hibernate 
+
+orm -> object relational mapping 
+
+
+	class ---- table 
+	variable --- column 	
+	object ---- record 
+
+
+	save ---- insert 
+	delete ---- delete 
+	save --- update 
+
+
+	class object methods 
+	SQL 
+
+
+	Configuration -->  
+	SessionFactory 	
+	Session 
+	Transaction 	
+	Query 
+	Criteria 
+	
+
+
+	jpa ->
+
+
+
+----------------------------------------------
+spring data jpa 
+jdbc api 
+mysql driver 
+boot devtool
+spring web 
+
+
+-----------------------------------------
+
+com -> folder -> controller,bean,dao,util 
+
+
+application.properties 
+ 
+#server 
+server.port=9999
+
+
+#database
+spring.datasource.url=jdbc:mysql://localhost:3306/expense_manager
+spring.datasource.username=root
+spring.datasource.password=root
+
+
+#hibernate
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+ 
+ 
+---------------------------------------------------------------
+entity -> bean 
+
+
+
+
+
