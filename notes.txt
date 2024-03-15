@@ -65,6 +65,38 @@ spring.jpa.properties.hibernate.format_sql=true
 ---------------------------------------------------------------
 entity -> bean 
 
+---------------------------------------------------------------
+
+1) create folder repository 
+2) inside repository folder ->	
+					will create an interface 
+3) extends JpaRepository<TableName,DataTypePrimarKey> 
+ 
+
+use -> controller ? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
