@@ -76,7 +76,14 @@ entity -> bean
 use -> controller ? 
 
 
-
+-----------------------------------------------------
+Product ->
+	productId  : 1 auto  
+	name : legion y 520 
+	price : 152222 
+	qty : 100 
+	category : laptop 
+	available : boolean 
 
 
 
