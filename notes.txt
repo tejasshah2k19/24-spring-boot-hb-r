@@ -84,9 +84,17 @@ Product ->
 	qty : 100 
 	category : laptop 
 	available : boolean 
+--------------------------------------------------------
 
 
 
+
+front end -> api ? 
+
+signup
+login  post email password 
+
+swagger-doc 
 
 
 
