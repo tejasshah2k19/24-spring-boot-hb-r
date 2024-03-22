@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +25,9 @@ public class UserController {
 
 	@PostMapping("/save")
 	public ResponseEntity<?> addUser(@RequestBody UserEntity user) {
+
+		System.out.println(user.getRole());
+		System.out.println(user.getRole().getRoleId());
 
 		userRepo.save(user);// insert
 
@@ -68,7 +72,27 @@ public class UserController {
 	}
 	
 	
+	//update -> mapping ?
+	@PutMapping("/update")
+	public ResponseEntity<?> updateUser(@RequestBody UserEntity user){
+		UserEntity oldUser = userRepo.findById(user.getUserId()).get();
+
+		//fn 
+		if(user.getFirstName() != null) {
+			oldUser.setFirstName(user.getFirstName());
+		}
+		//ln 
+		if(user.getLastName() != null) {
+			oldUser.setFirstName(user.getLastName());
+		}
+		
+		
+		userRepo.save(oldUser);// save -> entity id present update 
+		return ResponseEntity.ok(oldUser); 
+		
+	}
 	
+	//swagger doc 
 	
 }
 

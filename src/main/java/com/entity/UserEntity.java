@@ -4,19 +4,26 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-@Entity //class-table ->create table 
-@Table(name="users")
+@Entity // class-table ->create table
+@Table(name = "users")
 public class UserEntity {
 
-	@Id //primary key 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//1 2 3 4 
+	@Id // primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // 1 2 3 4
 	private Integer userId;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String password;
+
+	// fk
+	@ManyToOne
+	@JoinColumn(name = "roleId")
+	RoleEntity role;
 
 	public Integer getUserId() {
 		return userId;
@@ -56,6 +63,14 @@ public class UserEntity {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public RoleEntity getRole() {
+		return role;
+	}
+
+	public void setRole(RoleEntity role) {
+		this.role = role;
 	}
 
 }
