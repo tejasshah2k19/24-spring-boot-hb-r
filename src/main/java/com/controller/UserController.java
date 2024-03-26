@@ -29,6 +29,7 @@ public class UserController {
 		System.out.println(user.getRole());
 		System.out.println(user.getRole().getRoleId());
 
+		//roleId -1 , 10 
 		userRepo.save(user);// insert
 
 		return ResponseEntity.ok(user);

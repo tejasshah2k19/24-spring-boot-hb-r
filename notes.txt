@@ -96,12 +96,33 @@ login  post email password
 
 swagger-doc 
 
+--------------------------------------------------------------
 
 
 
+	user 
+1	x
+
+	address 		
+10	ahmedabad 205 	1
+20  ahmedabad 207 	1	
+
+1 user has many address 
+1 address belong to 1 user 
+-----------------------------------------------------------------------------
+
+user 
+1 x 
+2 y 
 
 
-
+task 
+1 payment 1
+2 fpwd    1 
+ 
+1 user has n task
+1 task belogns to 1 user 
+------------------------------------------------------------------------------------
 
 
 

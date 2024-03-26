@@ -1,11 +1,14 @@
 package com.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity // class-table ->create table
@@ -21,9 +24,12 @@ public class UserEntity {
 	private String password;
 
 	// fk
-	@ManyToOne
+	@ManyToOne // 1-1 1-M M-1 M-M //order - 1user Norder
 	@JoinColumn(name = "roleId")
 	RoleEntity role;
+
+	@OneToMany
+	List<AddressEntity> address;
 
 	public Integer getUserId() {
 		return userId;
@@ -71,6 +77,14 @@ public class UserEntity {
 
 	public void setRole(RoleEntity role) {
 		this.role = role;
+	}
+
+	public List<AddressEntity> getAddress() {
+		return address;
+	}
+
+	public void setAddress(List<AddressEntity> address) {
+		this.address = address;
 	}
 
 }
