@@ -31,6 +31,12 @@ public class UserEntity {
 	@OneToMany
 	List<AddressEntity> address;
 
+	
+	//1-Many 
+	@OneToMany
+	@JoinColumn(name = "userId") 
+	List<ContactEntity> contacts; 
+	
 	public Integer getUserId() {
 		return userId;
 	}

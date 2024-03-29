@@ -31,7 +31,7 @@ public class AddressController {
 		// user_address
 		UserEntity user = userRepo.findById(userId).get(); 
 		user.getAddress().add(address);
-		userRepo.save(user);
+		userRepo.save(user);//user_address
 		
 		return ResponseEntity.ok(address);
 	}
