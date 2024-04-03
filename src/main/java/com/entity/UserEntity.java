@@ -93,4 +93,12 @@ public class UserEntity {
 		this.address = address;
 	}
 
+	public List<ContactEntity> getContacts() {
+		return contacts;
+	}
+
+	public void setContacts(List<ContactEntity> contacts) {
+		this.contacts = contacts;
+	}
+
 }
